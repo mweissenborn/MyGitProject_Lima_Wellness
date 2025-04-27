@@ -1,0 +1,91 @@
+@font-face {
+  font-family:'Roboto';
+  src: url('fonts/Roboto\ Regular.woff2') format('woff2');
+  font-weight:400;
+  font-style:normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto\ Italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto\ Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto\ Bold\ Italic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Globale Schriftart setzen */
+:root {
+  --main-font: 'Roboto', sans-serif;
+}
+
+body {
+  font-family: var(--main-font);
+  font-weight: 400; /* Standard Gewicht */
+}
+
+:root{
+  --main-brand-color:#FE8B10; /* Hauptfarbe (Orange) */
+  --brand-accent: #F1BE57;    /* Sekundärfarbe (Gold) */
+--brand-highlight: #FBCF22; /* Akzentfarbe (Gelb) */
+--primary-color: #C5BCAB; /* Heller Haupthintergrund */
+--secondary-color:#271F1A; /* dunkler Akzenthintergrund */
+--light-secondary-color:#2A221C; /* etwas heller für Hamburger*/  
+--text-color:#FFEBC4; /* main-Textcolor */
+  --secondary-text-color:#B8A88A; /* dezenter als main-textcolor*/
+--third-text-color:#000000; /*Textcolor schwarz*/
+
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+
+}
+h1{
+  font-size: 6.25rem;
+  line-height: 115%;
+}
+@media(max-width: 800px){
+h1{
+  font-size: 3.21rem;
+  text-align: center;
+}
+.subheading{
+  text-align: center;
+}
+}
+@supports (-webkit-touch-callout: none) {
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  
+
+}
+* {
+  box-sizing: border-box;
+}

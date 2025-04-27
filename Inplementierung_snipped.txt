@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Schriftname'; /* Name der Schrift (z. B. 'Roboto') */
+  src: url('/fonts/dein-schriftname.ttf') format('truetype');
+  font-weight: 400; /* Standardgewicht (normal) */
+  font-style: normal;
+  font-display: swap; /* Optional, aber empfehlenswert */
+}
+
+/* Beispiel für eine fette Variante */
+@font-face {
+  font-family: 'Schriftname';
+  src: url('/fonts/dein-schriftname-bold.ttf') format('truetype');
+  font-weight: 700; /* Fett */
+  font-style: normal;
+}
+
+/* Beispiel für kursive Variante */
+@font-face {
+  font-family: 'Schriftname';
+  src: url('/fonts/dein-schriftname-italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}

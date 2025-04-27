@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Lima Wellness</title>
+    <link rel="stylesheet" href="general_settings.css">
+    <link rel="stylesheet" href="header.css?v=1.1">
+    <link rel="stylesheet" href="about_me.css">
+    <link rel="stylesheet" href="offers.css">
+    <script src="https://unpkg.com/css-doodle@0.38.3/css-doodle.min.js"></script>
+
+</head>
+<body>
+    <div class="parallax_container">
+    <header class="parallax_header">
+        <div class="header_text">
+            <nav>
+                <input type="checkbox" id="toggle_button">
+                <label for="toggle_button">
+                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFEBC4"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                </label>
+                <ul>
+                    <li><a href="#about_me_section">Über Mich</a></li>
+                    <li><a href="">Angebot</a></li>
+                    <li><a href="">Kontakt & Informationen</a></li>
+                </ul>
+            </nav>
+            <h1>Lima,<br><span style="color: var(--brand-accent);">Wellness</span> </h1>
+            <p class="subheading">Herzlich willkommen in der Lima Wellness-Praxis!
+                Entdecken Sie bei uns eine Oase der Entspannung und des Wohlbefindens.<br> In unserer Praxis bieten wir Ihnen eine Vielzahl von Behandlungen, die Körper, Geist und Seele in Einklang bringen.<br> Ob Sie sich eine Auszeit vom stressigen Alltag gönnen möchten oder gezielt Verspannungen lösen wollen. Bei uns sind Sie in den besten Händen.
+                </p>
+        </div>
+        <div class="logo-wrapper">
+        <div class="header_logo_1">
+            <img  src="img/Logo/Main-Logo_1.png" loading="lazy" alt="Lima Wellness Logo">
+            </div>
+        <div class="header_logo_2"><img  src="img/Logo/Main-Logo_1_2.png" loading="lazy" alt="Zusatzlogo">
+        </div>
+        </div>
+    </header>
+    <section id="about_me_section" class="section_1">
+        <img class="about_me_pic" loading="lazy" src="img/Über_uns/Portrait_1200.jpg" 
+        srcset="img/Über_uns/Portrait_400.jpg 400w,
+                img/Über_uns/Portrait_800.jpg 800w,
+                img/Über_uns/Portrait_1200.jpg 1200w"
+        sizes="(max-width: 600px) 100vw,
+                (max-width: 1200px) 50vw,
+                400px"
+        alt="Portrait von Fr. Lima">
+        <css-doodle class="about_me_animation">
+            @grid: 20 / 100%;
+            
+            :doodle {
+              grid-gap: 1px;
+            }
+            
+            background:#B8A88A;
+            transform: scale(0);
+            opacity: 0;
+            animation: m 5s linear infinite;
+            animation-delay: calc(-2s / @I * @i * @sin(@i));
+            
+            @keyframes m {
+              0%, 50%, 90% { 
+                transform: scale(1); 
+                opacity: 1; 
+              }
+              25%, 75%, 100% { 
+                transform: scale(0); 
+                opacity: 0; 
+              }
+            }
+          </css-doodle>  
+        <div class="about_me_container">
+            <h2 class="about_me_h2"><span style="color: var(--brand-accent);">Über Mich</span></h2>
+        
+            <p class="about_me_text">Herzlich willkommen!<br><br> Ich bin Pâmela Lima aus Rio de Janeiro. Ursprünglich gelernte Rechtswissenschaftlerin, folgte ich vor einigen Jahren meiner Leidenschaft für ganzheitliches Wohlbefinden. Seit 2020 widme ich mich der Wellnessbranche und erwarb Zertifikate in Wohlfühlmassagen, Rückenmassagen, Kopf-, Gesichts- und Nackenmassagen, Fußpflege sowie kreativem Nägeldesign.
+
+                Mein Fokus liegt darauf, Ihnen durch individuelle Behandlungen Entspannung im hektischen Alltag zu schenken. Ich kombiniere dabei Fachwissen mit brasilianischer Lebensfreude. Ob gezielte Verspannungslösung oder regenerierende Ganzkörpermassage: Jede Sitzung gestalte ich intuitiv und persönlich.
+                
+                Wellness ist für mich mehr als eine Dienstleistung. Es ist die Kunst, Raum für Achtsamkeit zu schaffen. In meiner Praxis verbinde ich Professionalität mit Herzlichkeit, um Sie zu mehr Balance zu führen.
+                <br>
+                Ich freue mich darauf, Sie kennenzulernen!
+                <br>
+                <br>
+                Herzlichst,
+                Pâmela Lima
+            </p>
+           
+        </div>
+    </section>
+</div>
+    <section class="offers">
+           
+    </section>
+    <footer></footer>
+    
+</body>
+</html>
+
+

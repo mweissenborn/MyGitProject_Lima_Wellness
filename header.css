@@ -1,0 +1,495 @@
+header {
+    /* Hintergrundbild */
+    background-image: url('img/background_2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+    
+    /* Mindesthöhe */
+    min-height: 80vh;
+    
+    /* Flexbox für Content-Zentrierung */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    /* Relativer Container für Overlay */
+    position: relative;
+}
+
+ header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+ }
+/* Header-Inhalt über das Overlay legen */
+.header_text {
+    z-index: 2;
+    max-width: 600px;
+    color: var(--text-color);
+    width: 850px;
+    line-height: 170%;
+  }
+
+.logo-wrapper {
+    display: flex;
+    flex-direction: column; /* Untereinander */
+    gap: 50px; /* Abstand zwischen den Logos */
+    align-items: center;
+    margin-top: 100px 0 0 20px;
+  }
+
+  .header_logo_1{
+    height: 200px;
+    width: 200px;
+    max-width: 80%;
+    max-height: 80%;
+    margin: -10px 0;
+     z-index: 2;
+}
+
+.header_logo_2{
+    height: 300px;
+    width: 300px;
+    max-width: 80%;
+    max-height: 80%;
+    margin: -10px 0;
+    z-index: 2;
+}
+
+.header_logo_1 img,
+.header_logo_2 img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+}
+
+
+
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a{
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+    padding: 25px;
+}
+
+nav a:hover{
+    color: var(--secondary-text-color);
+}
+
+nav a::after{
+    content: '';
+    height: 2px;
+    width: 0;
+    background: var(--main-brand-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 150ms ease-in-out;
+}
+
+nav a:hover::after{
+    width: 100%;
+}
+#toggle_button{
+    display: none;
+}
+label[for="toggle_button"] {
+    display: none;
+}
+label[for="toggle_button"] svg{
+    width:  40px;
+    height: 40px;
+}
+header{
+    gap: 50px;
+}
+
+
+
+    @media screen and (min-width:319px){
+        
+        
+        nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(42, 34, 28, 0.7);
+            border-radius: 0 0 25px 0;
+            margin: 0 0 0 0 ;
+            padding-top: 15px;
+            }
+            header h1{
+                font-size: clamp(2rem, 2.5vw, 2rem);
+                margin: 10px 0 20px 0;
+                padding-top: 10px;
+            }
+         .header_text{
+            margin-bottom: 0px;
+            margin-left: 12px;
+            margin-right: 12px;
+            font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+            line-height: 170%;
+         }
+            nav ul{
+            display: none;
+            flex-direction: column;
+            margin: 5px;
+            gap: 20px;
+            padding: 0;
+            }
+            nav ul li {
+                margin-bottom: 20px; /* Abstand nach unten */
+            }
+        
+            nav ul li:last-child {
+                margin-bottom: 0; /* Entferne den Abstand beim letzten Element */
+            }
+            #toggle_button:checked ~ ul{
+            display: flex;
+            }
+            label[for="toggle_button"]{
+            display: block;
+            }
+            
+            
+            .logo-wrapper{
+                margin: 0 0 0 0;
+                gap: 10px
+                
+            }
+            .header_logo_1{
+                
+                height: 80px;
+                width: 80px;
+                margin: 0;
+                padding: 0;
+                gap: 0;
+            }
+            .header_logo_2{
+                height: 100px;
+                width: 170px;
+                margin-top: 10px;
+                padding: 0;
+                gap: 0;
+    
+            }
+        }
+      
+        @media(min-width:576px) {
+    header {
+        gap: 10px;
+    }
+    header h1{
+        font-size: clamp(2rem, 2.5vw, 2.5rem);
+        margin: 40px 0 40px 0;
+    }
+    nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(42, 34, 28, 0.7);
+        padding: 15px;
+        border-radius: 0 0 25px 0;
+        margin: 0 0 0 0;
+    
+        }
+     .header_text{
+        margin-bottom: 0px;
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-top: 40px;
+        font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+        line-height: 170%;
+     }
+        nav ul{
+        display: none;
+        flex-direction: column;
+        }
+        #toggle_button:checked ~ ul{
+        display: flex;
+        }
+        label[for="toggle_button"]{
+        display: block;
+        }
+        .logo-wrapper{
+            margin-top: 120px;
+            gap: 10px;
+            height: 400px
+        }
+        .header_logo_1{
+            
+            height: 80px;
+            width: 80px;
+            margin: 0;
+            padding: 0;
+            gap: 0;
+        }
+        .header_logo_2{
+            height: 100px;
+            width: 170px;
+            margin: 0;
+            padding: 0;
+            gap: 0;
+
+        }
+    }
+
+
+    @media (orientation: landscape) and (max-height: 500px) {
+        nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(42, 34, 28, 0.7);
+            border-radius: 0 0 25px 0;
+            margin: 40px 0 0 0 ;
+            padding-top: 70px;
+            }
+            header h1{
+                
+                font-size: clamp(2rem, 2.5vw, 2.5rem);
+                margin: 20px 0 20px 0;
+                padding-top: 30px;
+            }
+         .header_text{
+            margin-bottom: 0px;
+            margin-left: 12px;
+            margin-right: 12px;
+            font-size: clamp(1rem, 2.5vw, 2rem);
+            line-height: 170%;
+         }
+            nav ul{
+            display: none;
+            flex-direction: column;
+            margin: 5px;
+            gap: 20px;
+            padding: 0;
+            }
+            nav ul li {
+                margin-bottom: 20px; /* Abstand nach unten */
+            }
+        
+            nav ul li:last-child {
+                margin-bottom: 0; /* Entferne den Abstand beim letzten Element */
+            }
+            #toggle_button:checked ~ ul{
+            display: flex;
+            }
+            label[for="toggle_button"]{
+            display: block;
+            }
+            
+            
+            .logo-wrapper{
+                margin: 0 0 0 0;
+                gap: 10px
+                
+            }
+            .header_logo_1{
+                
+                height: 60px;
+                width: 60px;
+                
+            }
+            .header_logo_2{
+                height: 100px;
+                width: 170px;
+                margin-top: 10px;
+                
+    
+            }
+        }
+    
+        
+    @media(min-width:768px) {
+        header {
+            gap: 10px;
+        }
+        header h1{
+            font-size: clamp(2rem, 2.5vw, 2.5rem);
+            margin: 40px 0 40px 0;
+        }
+        nav{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(42, 34, 28, 0.7);
+            padding: 15px;
+            border-radius: 0 0 25px 0;
+            margin: 0 0 0 0;
+            }
+         .header_text{
+            margin-bottom: 0px;
+            margin-left: 30px;
+            margin-right: 30px;
+            margin-top: 40px;
+            font-size: clamp(1rem, 2.5vw, 2rem);
+            line-height: 170%;
+         }
+            nav ul{
+            display: none;
+            flex-direction: column;
+            }
+            #toggle_button:checked ~ ul{
+            display: flex;
+            }
+            label[for="toggle_button"]{
+            display: block;
+            }
+            .logo-wrapper{
+                margin: 20px 0 20px 0;
+                
+                display: flex;
+                text-align: center;
+            }
+            .header_logo_1{
+                
+                height: 55%;
+                width: 55%;
+                margin: 0 0 15px 0;
+                padding: 0;
+                gap: 0;
+            }
+            .header_logo_2{
+                height: 35%;
+                width: 35%;
+                margin: 0;
+                padding: 0;
+                gap: 0;
+    
+            }
+        }
+        @media (orientation: landscape) and (max-height: 700px) {
+            nav{
+                font-size: clamp(1rem, 2.5vw, 2rem);
+                position: fixed !important;
+                top: 0;
+                left: 0;
+                background: rgba(42, 34, 28, 0.7);
+                border-radius: 0 0 25px 0;
+                margin: 40px 0 0 0 ;
+                padding-top: 40px;
+                }
+                header{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 80px;
+                }
+                header h1{
+                    font-size: clamp(2rem, 2.5vw, 2.5rem);
+                    margin: 20px 0 20px 0;
+                    
+                }
+                .subheading{
+                    font-size: clamp(1rem, 2.5vw, 2rem);
+                    line-height: 170%;
+                }
+             .header_text{
+                margin-bottom: 0px;
+                margin-left: 12px;
+                margin-right: 12px;
+                font-size: clamp(1rem, 2.5vw, 2rem);
+                text-align: center;
+                line-height: 170%;
+             }
+                nav ul{
+                display: none;
+                flex-direction: column;
+                margin: 5px;
+                gap: 20px;
+                padding: 0;
+                }
+                nav ul li {
+                    margin-bottom: 20px; /* Abstand nach unten */
+                }
+            
+                nav ul li:last-child {
+                    margin-bottom: 0; /* Entferne den Abstand beim letzten Element */
+                }
+                #toggle_button:checked ~ ul{
+                display: flex;
+                }
+                label[for="toggle_button"]{
+                display: block;
+                }
+                
+                
+                .logo-wrapper{
+                    margin: 50px 0 0 0;
+                    gap: 10px
+               }
+               .header_logo_1{
+                
+                height: 100px;
+                width: 100px;
+                margin: 0;
+                padding-bottom: 10px;
+                gap: 0;
+            }
+            .header_logo_2{
+                text-align: center;
+                height: 40px;
+                width: 400px;
+                padding: 0;
+                gap: 0;
+                margin: 0 0 0 0;
+            }
+        }
+        @media (min-width: 801px) {
+            /* Zeige normale Navigation */
+            nav ul {
+              display: flex !important; /* Überschreibt Mobile-Styles */
+              flex-wrap: nowrap;
+              white-space: nowrap;
+              flex-direction: row;
+              justify-content: center;
+              margin: 0 auto
+            }
+          
+            /* Verstecke Hamburger-Menü */
+            label[for="toggle_button"] {
+              display: none !important;
+            }
+          
+            /* Reset Mobile-Positionierung */
+            nav {
+              position: relative !important;
+              background: transparent !important;
+              padding: 0 !important;
+              border-radius: 0 !important;
+            }
+            h1{
+                text-align: center;
+                font-size: clamp(2.5rem, 2.5vw, 3rem) !important;
+            }
+           .subheading{
+            text-align: center;
+            font-size: clamp(1.2rem, 2.5vw, 1.3rem);
+            line-height: 170%;
+           }
+           .parallax_header{
+            display: flex;
+            flex-direction: column;
+           }
+         
+            
+            }

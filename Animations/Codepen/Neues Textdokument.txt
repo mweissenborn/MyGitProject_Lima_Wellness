@@ -1,0 +1,134 @@
+<div!-- Hier ist eine rechtskonforme Implementierung für deine Website: --
+
+<!-- 1. Im HTML-Code (am besten direkt bei der genutzten Animation): -->
+
+<!-- html -->
+<!-- Copy -->
+<!-- 
+  Animations-Code basierend auf:
+  Copyright (c) 2025 yuanchuan
+  Original: https://codepen.io/yuanchuan/pen/yLjaERw
+  Lizenz: MIT (https://opensource.org/licenses/MIT)
+--->
+2. Im CSS/JS-Code (am Anfang der Datei wo der Code verwendet wird):
+
+css
+Copy
+/*!
+ * Animation Implementation:
+ * Copyright (c) 2025 yuanchuan
+ * MIT Licensed (https://codepen.io/yuanchuan/pen/yLjaERw)
+ * Modifiziert für Lima Wellness
+ */
+3. Im Footer-Bereich (z.B. in deiner Fußzeile):
+
+html
+Copy
+<footer>
+  <div class="credits">
+    <!-- Andere Footer-Inhalte -->
+    <p class="license-info">
+      Enthält Code von 
+      <a href="https://codepen.io/yuanchuan/pen/yLjaERw" target="_blank" rel="noopener nofollow">
+        yuanchuan
+      </a> 
+      (MIT-Lizenz)
+    </p>
+  </div>
+</footer>
+Run HTML
+4. Optional in der Impressum-Seite:
+
+html
+Copy
+<section class="licenses">
+  <h3>Drittlizenzen</h3>
+  <div class="license-item">
+    <h4>Animationstechnik</h4>
+    <p>Verwendeter Code: © 2025 yuanchuan</p>
+    <p>Quelle: <a href="https://codepen.io/yuanchuan/pen/yLjaERw">CodePen</a></p>
+    <p>Lizenz: 
+      <a href="https://opensource.org/licenses/MIT">MIT-Lizenz</a>
+    </p>
+  </div>
+</section>
+Run HTML
+Wichtige Best Practices:
+
+Zweisprachige Anzeige bei deutscher Website:
+
+html
+Copy
+<!-- Deutsch/Englisch Kombination -->
+<div class="credit-badge">
+  <span>Animation by</span>
+  <a href="...">yuanchuan</a>
+  <span>(MIT-License / MIT-Lizenz)</span>
+</div>
+Run HTML
+Mobile-Optimierung:
+
+css
+Copy
+/* Kleine Screens vereinfachen */
+@media (max-width: 768px) {
+  .license-info {
+    font-size: 0.8em;
+    line-height: 1.4;
+  }
+  
+  .license-info a {
+    display: block;
+    word-break: break-all;
+  }
+}
+Performance-Optimierung für Links:
+
+html
+Copy
+<!-- Sicherheits-/Performance-Attribute -->
+<a href="..." 
+   target="_blank"
+   rel="noopener noreferrer nofollow"
+   aria-label="Externer Link zur Codequelle (öffnet in neuem Tab)">
+   Originalcode
+</a>
+Run HTML
+Strukturierte Daten (für SEO):
+
+html
+Copy
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "license": "https://opensource.org/licenses/MIT",
+  "creator": {
+    "@type": "Person",
+    "name": "yuanchuan",
+    "url": "https://codepen.io/yuanchuan"
+  }
+}
+</script>
+Run HTML
+Checkliste vor dem Go-Live:
+
+Alle Copyright-Vermerke im Quellcode vorhanden
+
+Funktionsfähigkeit aller Links geprüft
+
+Rechtsgültiges Impressum mit Verweis
+
+Keine sensitiven Daten in Code-Kommentaren
+
+Cross-Browser-Testing durchgeführt
+
+Copyright (c) 2025 by yuanchuan (https://codepen.io/yuanchuan/pen/yLjaERw)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+></div>
