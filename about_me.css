@@ -64,6 +64,12 @@
 css-doodle {
     width: 20vmin;
     height: 20vmin;
+    /*!
+ * Animation Implementation:
+ * Copyright (c) 2025 yuanchuan
+ * MIT Licensed (https://codepen.io/yuanchuan/pen/yLjaERw)
+ * Modifiziert für Lima Wellness
+ */
 }
 .about_me_animation{
     display: flex;
